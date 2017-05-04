@@ -1,0 +1,14 @@
+{
+  "pages":[
+	"pages/home/home",
+	"pages/details/details"
+  ],
+  "window":{
+	"navigationBarTitleText":"cnode - 试玩版"
+  },
+  "networkTimeout":{
+	"request":10000,
+	"downloadFile":10000
+  },
+  "debug":true
+}

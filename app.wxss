@@ -1,0 +1,33 @@
+@import "util/wxParse/wxParse.wxss";
+
+/*默认全局*/
+page {
+    background-color: #ebebeb;
+    font-family: 'Microsoft YaHei','微软雅黑';
+    font-size:0.7rem;
+    height:100%;
+}
+.header{
+
+}
+swiper{
+
+}
+view.swiper-item{
+    display: block;
+}
+image{
+    box-sizing: border-box;
+}
+view{
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+/*自定义全局*/
+.mod{
+    background-color: #fff;
+    margin-bottom:0.5rem;
+}
+
+
