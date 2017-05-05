@@ -133,6 +133,8 @@ view{
     height: 5px;
     background-color: #333;
     margin-right: 5px;
+    border-radius: 10px;
+    vertical-align: middle;
 }
 
 .wxParse-li-square{

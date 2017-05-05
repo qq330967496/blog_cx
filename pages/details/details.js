@@ -30,16 +30,25 @@ Page({
     },
     //自定义方法
     init:function(){
-        console.log('初始化');
+        console.log('加载数据');
         const _self = this;
+        wx.showLoading({
+            title:'加载数据',
+            mask:true,
+        });
+        wx.showNavigationBarLoading();
         wx.request({
             url: 'https://cnodejs.org/api/v1/topic/'+_self.data.id, //仅为示例，并非真实的接口地址
             data:{
                 page:1,//当前页
                 limit:10,//没页条数
             },
+            complete: function(){
+                wx.hideLoading();
+                wx.hideNavigationBarLoading();
+            },
             success: function(json) {
-                console.log(json);
+                // console.log(json);
                 if(json.statusCode == 200){
                     _self.setData({
                         json_data : _self.data_filter(json.data.data),
@@ -54,7 +63,7 @@ Page({
     },
     //数据过滤
     data_filter:function(data){
-        console.log(data);
+        // console.log(data);
         WxParse.wxParse('article', 'html', data.content, this,5);
         // data.content = data.content.replace('<div','<view').replace('</div','</view');
         return data;

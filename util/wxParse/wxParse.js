@@ -42,6 +42,7 @@ function wxParse(bindName = 'wxParseData', type='html', data='<div class="color:
   that.setData(bindData)
   that.wxParseImgLoad = wxParseImgLoad;
   that.wxParseImgTap = wxParseImgTap;
+  that.wxParseTagATap = wxParseTagATap;
 }
 // 图片点击事件
 function wxParseImgTap(e) {
@@ -69,6 +70,7 @@ function wxParseImgLoad(e) {
 }
 // 假循环获取计算图片视觉最佳宽高
 function calMoreImageInfo(e, idx, that, bindName) {
+  // console.log(e);
   var temData = that.data[bindName];
   if (temData.images.length == 0) {
     return;
@@ -96,17 +98,18 @@ function wxAutoImageCal(originalWidth, originalHeight,that,bindName) {
       windowWidth = res.windowWidth-2*padding;
       windowHeight = res.windowHeight;
       //判断按照那种方式进行缩放
-      console.log("windowWidth" + windowWidth);
+      // console.log("windowWidth" + windowWidth);
       if (originalWidth > windowWidth) {//在图片width大于手机屏幕width时候
         autoWidth = windowWidth;
-        console.log("autoWidth" + autoWidth);
+        // console.log("autoWidth" + autoWidth);
         autoHeight = (autoWidth * originalHeight) / originalWidth;
-        console.log("autoHeight" + autoHeight);
-        results.imageWidth = autoWidth;
-        results.imageheight = autoHeight;
+        // console.log("autoHeight" + autoHeight);
+        // results.imageWidth = autoWidth +'px';
+        results.imageWidth = '100%';
+        results.imageheight = autoHeight +'px';
       } else {//否则展示原来的数据
-        results.imageWidth = originalWidth;
-        results.imageheight = originalHeight;
+        results.imageWidth = originalWidth +'px';
+        results.imageheight = originalHeight +'px';
       }
     }
   })
@@ -135,6 +138,21 @@ function wxParseTemArray(temArrayName,bindNameReg,total,that){
 
 function emojisInit(reg='',baseSrc="/wxParse/emojis/",emojis){
    HtmlToJson.emojisInit(reg,baseSrc,emojis);
+}
+
+/**
+ * a标签点击事件
+ * @param e
+ */
+function wxParseTagATap(e){
+  // console.log(e.currentTarget.dataset.src);
+  var that = this;
+
+    wx.showModal({
+      title:'小程序不让跳转，请复制url：',
+      content:e.currentTarget.dataset.src,
+    });
+
 }
 
 module.exports = {

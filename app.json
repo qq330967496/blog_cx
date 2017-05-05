@@ -4,11 +4,11 @@
 	"pages/details/details"
   ],
   "window":{
-	"navigationBarTitleText":"cnode - 试玩版"
+	"navigationBarTitleText":"cnode - 试玩版",
+	"backgroundColor":"#ebebeb"
   },
   "networkTimeout":{
 	"request":10000,
 	"downloadFile":10000
-  },
-  "debug":true
+  }
 }

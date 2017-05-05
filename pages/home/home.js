@@ -4,6 +4,7 @@ Page({
     data: {
         msg: '首页',
         img_mode:'aspectFit',
+        page:1,
         json_data:[],
     },
     onLoad:function(){
@@ -24,22 +25,54 @@ Page({
     onUnload:function(){
         console.log('生命周期函数--监听页面卸载');
     },
+    //下拉加载
+    onPullDownRefresh:function(){
+        console.log( "下拉刷新...." );
+        this.setData({
+            page: 1,
+            json_data:[],
+        });
+        this.init(function(){
+            wx.stopPullDownRefresh();
+        });
+    },
+    //上拉到底部
+    onReachBottom:function(){
+        console.log('底部加载更多...');
+        const _self = this;
+        this.setData({
+            page: _self.data.page+1,
+            // json_data:[],
+        });
+        this.init();
+    },
+
     //自定义方法
-    init:function(){
-        console.log('初始化');
+    init:function(cb){
+        console.log('加载数据');
+        wx.showLoading({
+            title:'加载数据',
+            mask:true,
+        });
+        wx.showNavigationBarLoading();
         const _self = this;
         wx.request({
             url: 'https://cnodejs.org/api/v1/topics', //仅为示例，并非真实的接口地址
             data:{
-                page:1,//当前页
+                page:_self.data.page,//当前页
                 limit:10,//没页条数
             },
+            complete: function(){
+                wx.hideLoading();
+                wx.hideNavigationBarLoading();
+            },
             success: function(json) {
-                console.log(json);
+                // console.log(json);
                 if(json.statusCode == 200){
                     _self.setData({
-                        json_data : _self.data_filter(json.data.data),
+                        json_data : _self.data.json_data.concat(_self.data_filter(json.data.data)),
                     });
+                    cb?cb():'';
                 }
             },
             fail:function(error){
@@ -57,7 +90,6 @@ Page({
         return result;
     },
     to_details:function(event){
-        console.log(event.currentTarget.dataset.id);
-
-    }
+        // console.log(event.currentTarget.dataset.id);
+    },
 });
