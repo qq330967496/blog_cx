@@ -1,0 +1,10 @@
+<!--入口模版-->
+<template name="modal">
+    <view class="modal" wx:if="{{showModal}}">
+        <view class="main">
+            <view class="title">标题</view>
+            <view class="content">内容</view>
+        </view>
+        <view class="mask"></view>
+    </view>
+</template>

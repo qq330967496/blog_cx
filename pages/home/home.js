@@ -1,4 +1,5 @@
 var utils = require('../../util/utils.js');
+var Modal = require('../../util/modal/modal.js');
 
 Page({
     data: {
@@ -35,6 +36,7 @@ Page({
         this.init(function(){
             wx.stopPullDownRefresh();
         });
+        Modal.modal('modal',this);
     },
     //上拉到底部
     onReachBottom:function(){

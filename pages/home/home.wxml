@@ -1,7 +1,12 @@
-<view id="home">
+<import src="../../util/modal/modal.wxml"/>
+
+
+<view class="container">
     <view class="header">
 
     </view>
+
+    <template is="modal"/>
 
     <view class="main">
         <view class="list">
@@ -20,4 +25,6 @@
             </view>
         </view>
     </view>
+
+
 </view>

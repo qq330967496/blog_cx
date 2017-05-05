@@ -1,4 +1,5 @@
 @import "util/wxParse/wxParse.wxss";
+@import "util/modal/modal.wxss";
 
 /*默认全局*/
 page {

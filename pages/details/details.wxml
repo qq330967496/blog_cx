@@ -1,6 +1,6 @@
 <import src="../../util/wxParse/wxParse.wxml"/>
 
-<view id="details">
+<view class="container">
     <view class="header">
 
     </view>

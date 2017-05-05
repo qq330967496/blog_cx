@@ -1,4 +1,4 @@
-#details{
+.container{
     background-color: #fff;
     padding:1rem;
 }
