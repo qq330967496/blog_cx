@@ -24,6 +24,9 @@
                         <view class="tag">
                             {{tagEnums[item.tab]}}
                         </view>
+                        <view class="tag good" wx:if="{{item.good}}">
+                            精华
+                        </view>
                         <view class="tag stick" wx:if="{{item.top}}">
                             置顶
                         </view>

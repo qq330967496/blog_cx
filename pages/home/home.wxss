@@ -39,23 +39,30 @@
 .list-item .top .tags{
     width:55%;
 }
-.list-item .top .time{
-    width:30%;
-    color:#ccc;
-    font-size: .8rem;
-    text-align: right;
-}
-.tag{
+.list-item .top .tags .tag{
     font-size: .8rem;
     background-color: #e5e5e5;
     color: #999;
     border-radius: 0.2rem;
     padding:0 0.2rem;
     margin-right:0.2rem;
+    border:1px solid #e5e5e5;
 }
-.tag.stick{
+.list-item .top .tags .tag.stick{
     background-color: #80bd01;
     color:#fff;
+    border:1px solid #80bd01;
+}
+.list-item .top .tags .tag.good{
+    background-color: transparent;
+    color:#f00;
+    border:1px solid #f00;
+}
+.list-item .top .time{
+    width:30%;
+    color:#ccc;
+    font-size: .8rem;
+    text-align: right;
 }
 
 .list-item .title{
