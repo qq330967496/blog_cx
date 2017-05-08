@@ -1,9 +1,15 @@
-<!--入口模版-->
-<template name="modal">
-    <view class="modal" wx:if="{{showModal}}">
+
+<!--警告模态框-->
+<template name="modal_alert">
+    <view class="modal" wx:if="{{show}}">
         <view class="main">
-            <view class="title">标题</view>
-            <view class="content">内容</view>
+            <view class="title">{{obj.title}}</view>
+            <view class="content">{{obj.content}}</view>
+            <view class="btns">
+                <view class="btn" bindtap="ok">
+                    {{obj.ok_text?obj.ok_text:'确定'}}
+                </view>
+            </view>
         </view>
         <view class="mask"></view>
     </view>

@@ -24,6 +24,15 @@ Page({
     },
     onReady:function(){
         console.log('生命周期函数--监听页面初次渲染完成');
+
+        var modal = new Modal(this);
+        modal.m_alert({
+            title:'警告框',
+            content:'警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容',
+        },function(){
+            console.log('关闭成功');
+        });
+        modal.open();
     },
     onHide:function(){
         console.log('生命周期函数--监听页面隐藏');
@@ -42,7 +51,6 @@ Page({
             console.log('收起下拉');
             wx.stopPullDownRefresh();
         });
-        Modal.modal('modal',this);
     },
     //上拉到底部
     onReachBottom:function(){

@@ -18,11 +18,32 @@
 .modal>.main{
     position: fixed;
     width:80%;
-    min-height: 50px;
+    min-height: 0.2rem;
     top:20%;
     left:0;
     right:0;
     margin:0 auto;
     background-color: #fff;
     z-index: 101;
+    border-radius: 0.2rem;
+    text-align: center;
+}
+.modal .title{
+    width:100%;
+    font-weight: bolder;
+    padding:0.5rem;
+}
+.modal .content{
+    width:100%;
+    padding:0.5rem;
+}
+.modal .btns{
+    width:100%;
+    display: flex;
+    border-top:1px solid #ccc;
+    color:#247be2;
+    padding:0.5rem 0;
+}
+.modal .btns>.btn{
+    flex: 1;
 }

@@ -10,7 +10,7 @@ page {
     line-height: 120%;
 }
 .header{
-
+    z-index: 101;
 }
 swiper{
 

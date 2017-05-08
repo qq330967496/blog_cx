@@ -1,6 +1,8 @@
 <import src="../../util/wxParse/wxParse.wxml"/>
+<import src="../../util/modal/modal.wxml"/>
 
 <view class="container">
+    <template is="modal_info" data="{{modal_show:modal_show}}"/>
     <view class="header">
 
     </view>

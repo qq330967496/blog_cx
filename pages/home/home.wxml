@@ -1,8 +1,7 @@
 <import src="../../util/modal/modal.wxml"/>
 
-
 <view class="container">
-    <template is="modal"/>
+    <template is="{{modal_type}}" data="{{show:modal_show,obj:modal_obj}}" wx:if="{{modal_type}}"/>
 
     <view class="header">
         <view class="types">

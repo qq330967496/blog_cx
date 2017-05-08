@@ -1,5 +1,6 @@
 var utils = require('../../util/utils.js');
 var WxParse = require('../../util/wxParse/wxParse.js');
+var Modal = require('../../util/modal/modal.js');
 
 Page({
     data: {
