@@ -10,19 +10,29 @@
 
     <view class="main">
         <view class="list">
-            <view class="list-item" wx:key="{{index}}" wx:for="{{json_data}}" wx:for-index="index" wx:for-item="item">
-                <view class="list-item-left">
+            <navigator url="../details/details?id={{item.id}}" class="list-item" wx:key="{{index}}" wx:for="{{json_data}}" wx:for-index="index" wx:for-item="item">
+                <view class="top">
                     <image class="user_icon" src="{{item.author.avatar_url}}" mode="{{img_mode}}"></image>
-                </view>
-                <navigator url="../details/details?id={{item.id}}" class="list-item-right">
-                    <view class="title">
-                        {{item.title}}
+                    <view class="tags">
+                        <view class="tag">
+                            {{tagEnums[item.tab]}}
+                        </view>
+                        <view class="tag stick" wx:if="{{item.top}}">
+                            置顶
+                        </view>
                     </view>
-                    <view class="subtitle">
+                    <view class="time">
                         {{item.create_at}}
                     </view>
-                </navigator>
-            </view>
+                </view>
+                <view class="title">
+                    {{item.title}}
+                </view>
+                <view class="bottom">
+                    浏览（{{item.visit_count}}）
+                    评论（{{item.reply_count}}）
+                </view>
+            </navigator>
         </view>
     </view>
 

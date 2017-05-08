@@ -6,6 +6,12 @@ Page({
         msg: '首页',
         img_mode:'aspectFit',
         page:1,
+        tagEnums:{
+            ask:'问答',
+            share:'分享',
+            job:'招聘',
+            good:'精华',
+        },
         json_data:[],
     },
     onLoad:function(){

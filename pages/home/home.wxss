@@ -5,20 +5,44 @@
     /*border-bottom:1px solid #ebebeb;*/
 }
 
-.user_icon{
+.list-item .top{
     width:100%;
-    height:3rem;
+}
+.list-item .top .user_icon{
+    width:15%;
+    height:2rem;
+}
+.list-item .top .tags{
+    width:55%;
+}
+.list-item .top .time{
+    width:30%;
+    color:#ccc;
+    font-size: .8rem;
+    text-align: right;
+}
+.tag{
+    font-size: .8rem;
+    background-color: #e5e5e5;
+    color: #999;
+    border-radius: 0.2rem;
+    padding:0 0.2rem;
+    margin-right:0.2rem;
+}
+.tag.stick{
+    background-color: #80bd01;
+    color:#fff;
 }
 
-.list-item-left{
-    display: inline-block;
-    width:20%;
+.list-item .title{
+    width:100%;
+    padding:.5rem 0;
 }
-.list-item-right{
-    display: inline-block;
-    width:80%;
-}
-.subtitle{
+
+.list-item .bottom{
+    width:100%;
+    text-align: right;
     color:#ccc;
+    font-size: 0.7rem;
 }
 

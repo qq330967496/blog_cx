@@ -7,6 +7,7 @@ page {
     font-family: 'Microsoft YaHei','微软雅黑';
     font-size:1rem;
     height:100%;
+    line-height: 120%;
 }
 .header{
 
@@ -24,6 +25,7 @@ view{
     box-sizing: border-box;
     vertical-align: top;
     overflow: visible;
+    display: inline-block;
 }
 
 /*自定义全局*/
