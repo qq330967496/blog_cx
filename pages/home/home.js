@@ -1,5 +1,5 @@
-var utils = require('../../util/utils.js');
-var Modal = require('../../util/modal/modal.js');
+import utils from '../../util/utils.js';
+// import Modal from '../../util/modal/modal.js';
 
 Page({
     data: {
@@ -25,14 +25,14 @@ Page({
     onReady:function(){
         console.log('生命周期函数--监听页面初次渲染完成');
 
-        var modal = new Modal(this);
-        modal.m_alert({
-            title:'警告框',
-            content:'警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容',
-        },function(){
-            console.log('关闭成功');
-        });
-        modal.open();
+        // var modal = new Modal(this);
+        // modal.m_alert({
+        //     title:'警告框',
+        //     content:'警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容警告内容',
+        // },function(){
+        //     console.log('关闭成功');
+        // });
+        // modal.open();
     },
     onHide:function(){
         console.log('生命周期函数--监听页面隐藏');

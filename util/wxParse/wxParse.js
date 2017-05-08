@@ -7,6 +7,8 @@
  * 
  * for: 微信小程序富文本解析
  * detail : http://weappdev.com/t/wxparse-alpha0-1-html-markdown/184
+ *
+ * 修改：SeverHo
  */
 
 /**
@@ -42,7 +44,6 @@ function wxParse(bindName = 'wxParseData', type='html', data='<div class="color:
   that.setData(bindData)
   that.wxParseImgLoad = wxParseImgLoad;
   that.wxParseImgTap = wxParseImgTap;
-  that.wxParseTagATap = wxParseTagATap;
 }
 // 图片点击事件
 function wxParseImgTap(e) {
@@ -140,20 +141,6 @@ function emojisInit(reg='',baseSrc="/wxParse/emojis/",emojis){
    HtmlToJson.emojisInit(reg,baseSrc,emojis);
 }
 
-/**
- * a标签点击事件
- * @param e
- */
-function wxParseTagATap(e){
-  // console.log(e.currentTarget.dataset.src);
-  var that = this;
-
-    wx.showModal({
-      title:'小程序不让跳转，请复制url：',
-      content:e.currentTarget.dataset.src,
-    });
-
-}
 
 module.exports = {
   wxParse: wxParse,

@@ -4,7 +4,7 @@
     <view class="modal" wx:if="{{show}}">
         <view class="main">
             <view class="title">{{obj.title}}</view>
-            <view class="content">{{obj.content}}</view>
+            <text class="content" selectable="true">{{obj.content}}</text>
             <view class="btns">
                 <view class="btn" bindtap="ok">
                     {{obj.ok_text?obj.ok_text:'确定'}}

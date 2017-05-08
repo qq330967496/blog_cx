@@ -1,3 +1,9 @@
+view{
+    display: inline-block;
+}
+text{
+    display: inline-block;
+}
 .header{
     position:fixed;
     top:0;

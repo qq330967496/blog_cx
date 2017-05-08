@@ -1,6 +1,6 @@
-var utils = require('../../util/utils.js');
-var WxParse = require('../../util/wxParse/wxParse.js');
-var Modal = require('../../util/modal/modal.js');
+import utils  from '../../util/utils.js';
+import WxParse from '../../util/wxParse/wxParse.js';
+import Modal from '../../util/modal/modal.js';
 
 Page({
     data: {
@@ -15,6 +15,8 @@ Page({
             id: options.id
         });
         this.init();
+
+
     },
     onShow:function(){
         console.log('生命周期函数--监听页面显示');
@@ -68,4 +70,18 @@ Page({
         // data.content = data.content.replace('<div','<view').replace('</div','</view');
         return data;
     },
+
+    //a标签点击事件
+    wxParseTagATap:function(e){
+        // console.log(e.currentTarget.dataset.src);
+        var modal = new Modal(this);
+        modal.m_alert({
+            title:'复制链接在浏览器打开：',
+            content:e.currentTarget.dataset.src,
+        },function(){
+            console.log('关闭成功');
+        });
+        modal.open();
+
+    }
 });

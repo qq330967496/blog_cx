@@ -1,7 +1,9 @@
-<import src="../../util/modal/modal.wxml"/>
+<!--模态框引入-->
+<!--<import src="../../util/modal/modal.wxml"/>-->
 
 <view class="container">
-    <template is="{{modal_type}}" data="{{show:modal_show,obj:modal_obj}}" wx:if="{{modal_type}}"/>
+    <!--模态框引入-->
+    <!--<template is="{{modal_type}}" data="{{show:modal_show,obj:modal_obj}}" wx:if="{{modal_type}}"/>-->
 
     <view class="header">
         <view class="types">
