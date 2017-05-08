@@ -17,18 +17,16 @@ Page({
     },
     onLoad:function(){
         console.log('生命周期函数--监听页面加载');
-
-    },
-    onReady:function(){
-        console.log('生命周期函数--监听页面初次渲染完成');
         this.init();
     },
     onShow:function(){
         console.log('生命周期函数--监听页面显示');
     },
+    onReady:function(){
+        console.log('生命周期函数--监听页面初次渲染完成');
+    },
     onHide:function(){
         console.log('生命周期函数--监听页面隐藏');
-
     },
     onUnload:function(){
         console.log('生命周期函数--监听页面卸载');
@@ -41,6 +39,7 @@ Page({
             json_data:[],
         });
         this.init(function(){
+            console.log('收起下拉');
             wx.stopPullDownRefresh();
         });
         Modal.modal('modal',this);
