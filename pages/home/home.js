@@ -12,6 +12,7 @@ Page({
             job:'招聘',
             good:'精华',
         },
+        tab:"",
         json_data:[],
     },
     onLoad:function(){
@@ -69,6 +70,7 @@ Page({
             data:{
                 page:_self.data.page,//当前页
                 limit:10,//没页条数
+                tab:_self.data.tab,
             },
             complete: function(){
                 wx.hideLoading();
@@ -100,4 +102,18 @@ Page({
     to_details:function(event){
         // console.log(event.currentTarget.dataset.id);
     },
+
+    //类型选择
+    select_type:function(e){
+        const val = e.currentTarget.dataset.val;
+        // this.data.tab = val; //TODO 【坑】-这种更改方式不会产生双向绑定，必须通过setData
+        this.setData({
+            tab:val,
+            page: 1,
+            json_data:[],
+        });
+        this.init(function(){
+            wx.stopPullDownRefresh();
+        });
+    }
 });

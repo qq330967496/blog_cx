@@ -2,11 +2,18 @@
 
 
 <view class="container">
-    <view class="header">
-
-    </view>
-
     <template is="modal"/>
+
+    <view class="header">
+        <view class="types">
+            <view data-val="" class="type {{tab==''?'selected':''}}" bindtap="select_type">
+                全部
+            </view>
+            <view data-val="{{key}}" class="type  {{tab==key?'selected':''}}" bindtap="select_type" wx:key="{{key}}" wx:for="{{tagEnums}}" wx:for-index="key" wx:for-item="val">
+                {{val}}
+            </view>
+        </view>
+    </view>
 
     <view class="main">
         <view class="list">
