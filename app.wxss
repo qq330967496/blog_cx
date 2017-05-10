@@ -33,7 +33,7 @@ text{
 /*自定义全局*/
 .mod{
     background-color: #fff;
-    margin-bottom:0.5rpx;
+    margin-top: 25rpx;
 }
 
 

@@ -29,8 +29,6 @@ text{
 }
 
 .list-item{
-    background-color: #fff;
-    margin-top: 25rpx;
     padding:25rpx;
     /*border-bottom:1px solid #ebebeb;*/
 }
