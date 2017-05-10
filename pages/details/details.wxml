@@ -2,16 +2,21 @@
 <import src="../../util/modal/modal.wxml"/>
 
 <view class="container">
+    <!--TODO 【坑】 - 无法对dom进行操作-自定义模板-->
     <template is="{{modal_type}}" data="{{show:modal_show,obj:modal_obj}}" wx:if="{{modal_type}}"/>
 
     <view class="header">
 
     </view>
 
+    <!--TODO 【坑】 - 图片没有初始宽度和高度-->
+    <image src="../../assets/img/deservetosee_1.png" style="display: none;"></image>
+
     <view class="main">
         <!--<view class="mod" is="wxParse" data="{{wxParseData:article.nodes}}">
 
         </view>-->
+        <!-- TODO 【坑】 - 无法使用HTML标签-->
         <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
     </view>
 </view>

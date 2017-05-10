@@ -113,7 +113,7 @@ Page({
     //类型选择
     select_type:function(e){
         const val = e.currentTarget.dataset.val;
-        // this.data.tab = val; //TODO 【坑】-这种更改方式不会产生双向绑定，必须通过setData
+        // this.data.tab = val; //TODO 【坑】 - 双向绑定出错
         this.setData({
             tab:val,
             page: 1,

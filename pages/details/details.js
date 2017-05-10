@@ -72,6 +72,7 @@ Page({
     },
 
     //a标签点击事件
+    //TODO 【坑】 - 外链的尴尬-小程序不允许跳转到外链的
     wxParseTagATap:function(e){
         // console.log(e.currentTarget.dataset.src);
         var modal = new Modal(this);
