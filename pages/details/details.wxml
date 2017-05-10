@@ -9,7 +9,7 @@
 
     </view>
 
-    <!--TODO 【坑】 - 图片没有初始宽度和高度-->
+    <!--TODO 【坑】 - 图片默认固定宽度和高度-->
     <image src="../../assets/img/deservetosee_1.png" style="display: none;"></image>
 
     <view class="main">

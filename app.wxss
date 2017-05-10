@@ -20,6 +20,8 @@ view.swiper-item{
 }
 image{
     box-sizing: border-box;
+    width:100%;
+    height:0;
 }
 view{
     box-sizing: border-box;
