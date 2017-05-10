@@ -1,22 +1,25 @@
 # blog_cx
 > [博客-微信小程序（爬坑专用）](https://github.com/qq330967496/blog_cx)
 
+>[小程序开发文档](https://mp.weixin.qq.com/debug/wxadoc/dev/)
+
 ## 入坑准备
+- js支持ES6
 - 微信小程序的与众不同
     - .wxml：微信html文件
     - .wxss：微信css文件
     - 响应像素单位-rpx（responsive pixel），类似rem：1rpx = 屏幕宽度/750
+- 小程序的跟vue的设计相似：双向绑定，生命周期，MVVM模式
 - M-V-VM模式
     - M（model）：data模型
     - V（view）：UI
     - VM（view model）：通过双向绑定连接view和model
-    - C（controller）：MVC模式的C，处理请求响应，将model更新view
-- 小程序的跟vue的设计相似：双向绑定，生命周期
+    - MVC-C（controller）：MVC模式的C，处理请求响应，将model更新view
 - 项目结构
     - /assets：静态资源
     - /pages：各种页面
-    - /util：工具
-    - app.js：全局变量，方法
+    - /lib：工具库
+    - app.js：全局变量，方法（在页面js通过getApp()获取）
     - app.json: 全局配置
     - app.wxss：全局样式
     
@@ -25,16 +28,19 @@
 
 ## 坑与爬坑
 - window对象在哪
-    - 爬坑：微信小程序用wx对象    
+    - 爬坑：微信小程序用wx对象
+- wxss的:hover伪类，按下去就回不来了
+    - 爬坑：在标签添加hover-class属性，值对应wxss的类
 - 外链的尴尬-小程序不允许跳转到外链的
     - 爬坑：我使用了自定义模态框的方式弹窗，提供用户复制链接在浏览器打开
     - 原因：自带的模态框是无法复制文本的，自定义模态框用<text>实现，设置为可复制
-- 无法对dom进行操作，事件也只能操作当前对象，无法操作父级
-    - 爬坑-自定义模板：
+- 无法对dom进行操作，事件也只能操作当前标签，无法操作父级标签
+    - 爬坑-自定义模态框：
         - 编辑模板js，用于数据处理
         - 编辑模板wxml，wxss，处理数据绑定
         - 指定页面的js中引入模板js，把当前对象传递给模板js
         - 指定页面的wxml中引入模板wxml，传递参数给模板
+        - app.wxss中import模板的wxss
         - 注意：这个步骤相比dom操作复杂，数据的传递和引入模板比较容易出错
 - 图片默认固定宽度和高度，320px 240px
     - 爬坑：在app.wxss定义默认的宽度100%和高度为0，在具体标签样式中定义图片大小
@@ -50,7 +56,7 @@
 
 > [官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html)
 
-- pages：注册页面，值是页面所在路径，不带后缀
+- pages：注册页面，值是页面所在路径，不带后缀。（顺数第一个页面就是首页）
 - window：窗口设置。（具体页面的json中，只能配置窗口设置，不能配置其他）
     - navigationBarBackgroundColor：导航栏背景颜色
     - navigationBarTitleText：导航栏标题文本
@@ -66,7 +72,8 @@
         - text：文案
         - iconPath：图片路径
         - selectedIconPath：选中的图片路径
-- debug：是否使用调试模式。调试模式除了在模拟器中出现调试信息，还能让手机在预览模式下打开控制台
+- debug：是否使用调试模式。（另外，开发版的小程序可以在右上角打开调试）
+
 
 
 

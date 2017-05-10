@@ -32,6 +32,13 @@ text{
     padding:25rpx;
     /*border-bottom:1px solid #ebebeb;*/
 }
+/*TODO 【坑】 - wxss的:hover伪类，按下去就回不来了*/
+/*.list-item:hover{
+    background-color: #000;
+}*/
+/*.list-item-hover{
+    background-color: #000;
+}*/
 
 .list-item .top{
     width:100%;

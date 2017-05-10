@@ -1,5 +1,5 @@
-import utils from '../../util/utils.js';
-// import Modal from '../../util/modal/modal.js';
+import utils from '../../lib/utils.js';
+// import Modal from '../../lib/modal/modal.js';
 
 Page({
     data: {

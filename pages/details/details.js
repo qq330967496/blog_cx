@@ -1,6 +1,6 @@
-import utils  from '../../util/utils.js';
-import WxParse from '../../util/wxParse/wxParse.js';
-import Modal from '../../util/modal/modal.js';
+import utils  from '../../lib/utils.js';
+import WxParse from '../../lib/wxParse/wxParse.js';
+import Modal from '../../lib/modal/modal.js';
 
 Page({
     data: {

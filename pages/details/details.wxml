@@ -1,5 +1,5 @@
-<import src="../../util/wxParse/wxParse.wxml"/>
-<import src="../../util/modal/modal.wxml"/>
+<import src="../../lib/wxParse/wxParse.wxml"/>
+<import src="../../lib/modal/modal.wxml"/>
 
 <view class="container">
     <!--TODO 【坑】 - 无法对dom进行操作-自定义模板-->
