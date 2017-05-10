@@ -19,19 +19,19 @@ text{
 .header .types .type{
     flex:1;
     text-align: center;
-    padding:0.5rem 0;
+    padding:25rpx 0;
 }
 .header .types .type.selected{
     color:#80bd01;
 }
 .main{
-    margin-top:2rem;
+    margin-top:90rpx;
 }
 
 .list-item{
     background-color: #fff;
-    margin-top:0.5rem;
-    padding:0.5rem;
+    margin-top: 25rpx;
+    padding:25rpx;
     /*border-bottom:1px solid #ebebeb;*/
 }
 
@@ -40,18 +40,18 @@ text{
 }
 .list-item .top .user_icon{
     width:15%;
-    height:2rem;
+    height:90rpx;
 }
 .list-item .top .tags{
     width:55%;
 }
 .list-item .top .tags .tag{
-    font-size: .8rem;
+    font-size: 30rpx;
     background-color: #e5e5e5;
     color: #999;
-    border-radius: 0.2rem;
-    padding:0 0.2rem;
-    margin-right:0.2rem;
+    border-radius: 10rpx;
+    padding:0 10rpx;
+    margin-left:10rpx;
     border:1px solid #e5e5e5;
 }
 .list-item .top .tags .tag.stick{
@@ -67,19 +67,19 @@ text{
 .list-item .top .time{
     width:30%;
     color:#ccc;
-    font-size: .8rem;
+    font-size: 30rpx;
     text-align: right;
 }
 
 .list-item .title{
     width:100%;
-    padding:.5rem 0;
+    padding:20rpx 0;
 }
 
 .list-item .bottom{
     width:100%;
     text-align: right;
     color:#ccc;
-    font-size: 0.7rem;
+    font-size: 30rpx;
 }
 

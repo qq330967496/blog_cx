@@ -1,6 +1,6 @@
 .modal,.modal view,.modal text{
     display: inline-block;
-    font-size:1rem ;
+    font-size:35rpx ;
 }
 .modal{
     position: fixed;
@@ -22,31 +22,31 @@
 .modal>.main{
     position: fixed;
     width:80%;
-    min-height: 0.2rem;
+    min-height: 20rpx;
     top:20%;
     left:0;
     right:0;
     margin:0 auto;
     background-color: #fff;
     z-index: 101;
-    border-radius: 0.2rem;
+    border-radius: 10rpx;
     text-align: center;
 }
 .modal .title{
     width:100%;
     font-weight: bolder;
-    padding:0.5rem;
+    padding:20rpx;
 }
 .modal .content{
     width:100%;
-    padding:0.5rem;
+    padding:20rpx;
 }
 .modal .btns{
     width:100%;
     display: flex;
     border-top:1px solid #ccc;
     color:#247be2;
-    padding:0.5rem 0;
+    padding:20rpx 0;
 }
 .modal .btns>.btn{
     flex: 1;

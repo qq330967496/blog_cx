@@ -5,7 +5,7 @@
 page {
     background-color: #ebebeb;
     font-family: 'Microsoft YaHei','微软雅黑';
-    font-size:1rem;
+    font-size:35rpx;
     height:100%;
     line-height: 120%;
 }
@@ -33,7 +33,7 @@ text{
 /*自定义全局*/
 .mod{
     background-color: #fff;
-    margin-bottom:0.5rem;
+    margin-bottom:0.5rpx;
 }
 
 

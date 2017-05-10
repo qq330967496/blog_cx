@@ -5,7 +5,7 @@
 - 微信小程序的与众不同
     - .wxml：微信html文件
     - .wxss：微信css文件
-    - 
+    - 响应像素单位-rpx（responsive pixel），类似rem：1rpx = 屏幕宽度/750
 - M-V-VM模式
     - M（model）：data模型
     - V（view）：UI
@@ -14,15 +14,18 @@
 - 小程序的跟vue的设计相似：双向绑定，生命周期
 - 项目结构
     - /assets：静态资源
-    - /pages：页面
+    - /pages：各种页面
     - /util：工具
     - app.js：全局变量，方法
     - app.json: 全局配置
     - app.wxss：全局默认样式
     
+    
 
 
 ## 坑与爬坑
+- 没有window对象
+    - 爬坑：那就不用
 - 外链的尴尬-小程序不允许跳转到外链的
     - 爬坑：我使用了模态框的方式弹窗，提供用户复制链接在浏览器打开
 - 无法对dom进行操作
