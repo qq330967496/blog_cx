@@ -66,6 +66,7 @@ Page({
     //数据过滤
     data_filter:function(data){
         // console.log(data);
+        data.create_at = data.create_at.split("T")[0];
         WxParse.wxParse('article', 'html', data.content, this,5);
         // data.content = data.content.replace('<div','<view').replace('</div','</view');
         return data;

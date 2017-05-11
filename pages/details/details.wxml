@@ -13,6 +13,33 @@
     <image src="../../assets/img/deservetosee_1.png" style="display: none;"></image>
 
     <view class="main">
+        <view class="mod list-item">
+            <view class="top">
+                <image class="user_icon" src="{{json_data.author.avatar_url}}" mode="{{img_mode}}"></image>
+                <view class="tags">
+                    <view class="tag">
+                        {{tagEnums[item.tab]}}
+                    </view>
+                    <view class="tag good" wx:if="{{json_data.good}}">
+                        精华
+                    </view>
+                    <view class="tag stick" wx:if="{{json_data.top}}">
+                        置顶
+                    </view>
+                </view>
+                <view class="time">
+                    {{json_data.create_at}}
+                </view>
+            </view>
+            <view class="title">
+                {{json_data.title}}
+            </view>
+            <!--<view class="bottom">
+                浏览（{{json_data.visit_count}}）
+                评论（{{json_data.reply_count}}）
+            </view>-->
+        </view>
+
         <!--<view class="mod" is="wxParse" data="{{wxParseData:article.nodes}}">
 
         </view>-->

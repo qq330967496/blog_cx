@@ -1,4 +1,64 @@
 .container{
     background-color: #fff;
+}
+
+.wxParse-div{
     padding:35rpx;
+}
+
+
+.list-item{
+    padding:25rpx;
+    border-bottom:1px solid #ebebeb;
+}
+.list-item view,.list-item text{
+    display: inline-block;
+}
+
+.list-item .top{
+    width:100%;
+}
+.list-item .top .user_icon{
+    width:15%;
+    height:90rpx;
+}
+.list-item .top .tags{
+    width:55%;
+}
+.list-item .top .tags .tag{
+    font-size: 30rpx;
+    background-color: #e5e5e5;
+    color: #999;
+    border-radius: 10rpx;
+    padding:0 10rpx;
+    margin-left:10rpx;
+    border:1px solid #e5e5e5;
+}
+.list-item .top .tags .tag.stick{
+    background-color: #80bd01;
+    color:#fff;
+    border:1px solid #80bd01;
+}
+.list-item .top .tags .tag.good{
+    background-color: transparent;
+    color:#f00;
+    border:1px solid #f00;
+}
+.list-item .top .time{
+    width:30%;
+    color:#ccc;
+    font-size: 30rpx;
+    text-align: right;
+}
+
+.list-item .title{
+    width:100%;
+    padding:20rpx 0;
+}
+
+.list-item .bottom{
+    width:100%;
+    text-align: right;
+    color:#ccc;
+    font-size: 30rpx;
 }
