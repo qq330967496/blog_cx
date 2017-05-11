@@ -16,19 +16,28 @@
         <view class="mod list-item">
             <view class="top">
                 <image class="user_icon" src="{{json_data.author.avatar_url}}" mode="{{img_mode}}"></image>
-                <view class="tags">
-                    <view class="tag">
-                        {{tagEnums[item.tab]}}
+                <view class="info">
+                    <view class="tags">
+                        <view class="tag">
+                            {{tagEnums[json_data.tab]}}
+                        </view>
+                        <view class="tag good" wx:if="{{json_data.good}}">
+                            精华
+                        </view>
+                        <view class="tag stick" wx:if="{{json_data.top}}">
+                            置顶
+                        </view>
                     </view>
-                    <view class="tag good" wx:if="{{json_data.good}}">
-                        精华
+                    <view class="time">
+                        {{json_data.create_at}}
                     </view>
-                    <view class="tag stick" wx:if="{{json_data.top}}">
-                        置顶
+                    <view class="user_name">
+                        作者：{{json_data.author.loginname}}
                     </view>
-                </view>
-                <view class="time">
-                    {{json_data.create_at}}
+                    <view class="visit">
+                        浏览({{json_data.visit_count}})
+                        回复({{json_data.reply_count}})
+                    </view>
                 </view>
             </view>
             <view class="title">
@@ -45,5 +54,32 @@
         </view>-->
         <!-- TODO 【坑】 - 无法使用HTML标签-->
         <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+        <view class="mod reply">
+            <view class="title">{{json_data.replies.length}}回复</view>
+
+            <view class="reply_item" wx:key="{{i}}" wx:for="{{json_data.replies}}" wx:for-index="i" wx:for-item="item">
+                <image class="user_icon" src="{{item.author.avatar_url}}" mode="{{img_mode}}"></image>
+                <view class="info">
+                    <view class="user_name">
+                        {{item.author.loginname}}
+                        <view class="tag" wx:if="{{json_data.author.loginname == item.author.loginname}}">
+                            作者
+                        </view>
+                    </view>
+                    <view class="up">
+                        赞({{item.ups.length}})
+                    </view>
+                    <view class="time">
+                        {{i+1}}楼 {{item.create_at}}
+                    </view>
+                </view>
+                <view class="content">
+                    <view wx:for="{{replyTemArray}}" wx:key="{{j}}" wx:for-index="j" wx:for-item="item2" wx:if="{{i==j}}">
+                        <template is="wxParse" data="{{wxParseData:item2}}"/>
+                    </view>
+                </view>
+            </view>
+        </view>
     </view>
 </view>

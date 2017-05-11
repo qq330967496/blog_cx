@@ -22,28 +22,34 @@
             <navigator url="../details/details?id={{item.id}}" class="mod list-item" wx:key="{{index}}" wx:for="{{json_data}}" wx:for-index="index" wx:for-item="item">
                 <view class="top">
                     <image class="user_icon" src="{{item.author.avatar_url}}" mode="{{img_mode}}"></image>
-                    <view class="tags">
-                        <view class="tag">
-                            {{tagEnums[item.tab]}}
+                    <view class="info">
+                        <view class="tags">
+                            <view class="tag">
+                                {{tagEnums[item.tab]}}
+                            </view>
+                            <view class="tag good" wx:if="{{item.good}}">
+                                精华
+                            </view>
+                            <view class="tag stick" wx:if="{{item.top}}">
+                                置顶
+                            </view>
                         </view>
-                        <view class="tag good" wx:if="{{item.good}}">
-                            精华
+                        <view class="time">
+                            {{item.create_at}}
                         </view>
-                        <view class="tag stick" wx:if="{{item.top}}">
-                            置顶
+                        <view class="user_name">
+                            作者：{{item.author.loginname}}
                         </view>
-                    </view>
-                    <view class="time">
-                        {{item.create_at}}
+                        <view class="visit">
+                            浏览({{item.visit_count}})
+                            回复({{item.reply_count}})
+                        </view>
                     </view>
                 </view>
                 <view class="title">
                     {{item.title}}
                 </view>
-                <view class="bottom">
-                    浏览（{{item.visit_count}}）
-                    评论（{{item.reply_count}}）
-                </view>
+
             </navigator>
         </view>
     </view>

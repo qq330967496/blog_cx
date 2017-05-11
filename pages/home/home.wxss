@@ -44,11 +44,15 @@ text{
     width:100%;
 }
 .list-item .top .user_icon{
-    width:15%;
+    width:12%;
     height:90rpx;
 }
+.list-item .top .info{
+    width:88%;
+    padding-left:20rpx;
+}
 .list-item .top .tags{
-    width:55%;
+    width:70%;
 }
 .list-item .top .tags .tag{
     font-size: 30rpx;
@@ -56,7 +60,7 @@ text{
     color: #999;
     border-radius: 10rpx;
     padding:0 10rpx;
-    margin-left:10rpx;
+    margin-right:10rpx;
     border:1px solid #e5e5e5;
 }
 .list-item .top .tags .tag.stick{
@@ -78,13 +82,15 @@ text{
 
 .list-item .title{
     width:100%;
-    padding:20rpx 0;
+    padding-top:20rpx;
 }
-
-.list-item .bottom{
-    width:100%;
-    text-align: right;
+.list-item .user_name,.list-item .visit{
+    width:50%;
     color:#ccc;
     font-size: 30rpx;
+    padding-top:10rpx;
+}
+.list-item .visit{
+    text-align: right;
 }
 

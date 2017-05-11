@@ -7,12 +7,20 @@ Page({
         msg: '首页',
         img_mode:'aspectFit',
         id:'',
+        tagEnums:{
+            ask:'问答',
+            share:'分享',
+            job:'招聘',
+            good:'精华',
+        },
         json_data:{},
     },
     onLoad:function(options){
         console.log('生命周期函数--监听页面加载');
         this.setData({
-            id: options.id
+            id: options.id,
+            // 测试参数
+            // id:'59140743d371b6372a8af7f9',
         });
         this.init();
 
@@ -66,8 +74,19 @@ Page({
     //数据过滤
     data_filter:function(data){
         // console.log(data);
+        var _self = this;
         data.create_at = data.create_at.split("T")[0];
-        WxParse.wxParse('article', 'html', data.content, this,5);
+        WxParse.wxParse('article', 'html', data.content, _self,5);
+
+        for(var i = 0;i<data.replies.length; i++){
+            WxParse.wxParse('reply' + i, 'html', data.replies[i].content, this);
+            if (i === data.replies.length - 1) {
+                WxParse.wxParseTemArray("replyTemArray",'reply', data.replies.length, this)
+            }
+        }
+
+
+
         // data.content = data.content.replace('<div','<view').replace('</div','</view');
         return data;
     },
