@@ -1,4 +1,6 @@
 # blog_cx
+> 作者：SeverHo [330967496@qq.com](mailto:330967496@qq.com)
+
 > [博客-微信小程序（爬坑专用）](https://github.com/qq330967496/blog_cx)
 
 >[小程序开发文档](https://mp.weixin.qq.com/debug/wxadoc/dev/)
@@ -30,6 +32,8 @@
 ## 坑与爬坑
 - window对象在哪
     - 爬坑：微信小程序用wx对象
+- 调试，没有热加载
+    - 爬不出坑：在app.json的页面配置中将要调试的页面放在首行，但无法传参
     
 - input，radio，checkbox都不能直接绑定data
     - 爬坑：

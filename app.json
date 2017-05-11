@@ -1,8 +1,9 @@
 {
   "pages":[
-	"pages/demo/demo",
 	"pages/home/home",
-	"pages/details/details"
+	"pages/details/details",
+	"pages/demo/demo"
+
   ],
   "window":{
 	"navigationBarBackgroundColor":"#444",
