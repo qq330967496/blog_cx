@@ -38,7 +38,7 @@
                             {{item.create_at}}
                         </view>
                         <view class="user_name">
-                            作者：{{item.author.loginname}}
+                            {{item.author.loginname}}
                         </view>
                         <view class="visit">
                             浏览({{item.visit_count}})

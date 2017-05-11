@@ -64,13 +64,21 @@
     width:100%;
     padding-top:20rpx;
 }
-.list-item .user_name,.list-item .visit{
-    width:50%;
+.list-item .user_name{
+    width:45%;
     color:#ccc;
     font-size: 30rpx;
     padding-top:10rpx;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .list-item .visit{
+    width:55%;
+    color:#ccc;
+    font-size: 30rpx;
+    padding-top:10rpx;
     text-align: right;
 }
 

@@ -32,7 +32,7 @@
                         {{json_data.create_at}}
                     </view>
                     <view class="user_name">
-                        作者：{{json_data.author.loginname}}
+                        {{json_data.author.loginname}}
                     </view>
                     <view class="visit">
                         浏览({{json_data.visit_count}})
