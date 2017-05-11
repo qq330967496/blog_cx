@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="mod">
+        <view class="title">
+            双向绑定
+        </view>
+        <view class="mod_main">
+            <input type="text" bindinput="bindKeyInput"/>
+            <view>
+                结果：{{msg}}
+            </view>
+        </view>
+    </view>
+</view>

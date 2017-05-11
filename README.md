@@ -8,13 +8,14 @@
 - 微信小程序的与众不同
     - .wxml：微信html文件
     - .wxss：微信css文件
-    - 响应像素单位-rpx（responsive pixel），类似rem：1rpx = 屏幕宽度/750
+    - 响应式像素单位-rpx（responsive pixel），比rem好用：1rpx = 屏幕宽度/750
 - 小程序的跟vue的设计相似：双向绑定，生命周期，MVVM模式
+- 双向绑定：更新数据的同时同步视图，更新视图的同时同步数据
 - M-V-VM模式
     - M（model）：data模型
     - V（view）：UI
     - VM（view model）：通过双向绑定连接view和model
-    - MVC-C（controller）：MVC模式的C，处理请求响应，将model更新view
+    - MVC-C（controller）：MVC模式的C，处理请求和响应，将model更新到view
 - 项目结构
     - /assets：静态资源
     - /pages：各种页面
@@ -29,8 +30,12 @@
 ## 坑与爬坑
 - window对象在哪
     - 爬坑：微信小程序用wx对象
-- wxss的:hover伪类，按下去就回不来了
-    - 爬坑：在标签添加hover-class属性，值对应wxss的类
+    
+- input，radio，checkbox都不能直接绑定data
+    - 爬坑：
+        - input通过bindinput属性绑定指定方法进行双向绑定
+        - radio需要用到radio-group标签，通过bindchange属性绑定指定方法进行双向绑定
+        - checkbox其实是select标签，需要用到checkbox-group，通过bindchange属性绑定指定方法进行双向绑定
 - 外链的尴尬-小程序不允许跳转到外链的
     - 爬坑：我使用了自定义模态框的方式弹窗，提供用户复制链接在浏览器打开
     - 原因：自带的模态框是无法复制文本的，自定义模态框用<text>实现，设置为可复制
@@ -45,10 +50,11 @@
 - 图片默认固定宽度和高度，320px 240px
     - 爬坑：在app.wxss定义默认的宽度100%和高度为0，在具体标签样式中定义图片大小
 - 无法使用HTML标签
-    - 爬坑：用第三方工具进行转化，wxParse是一个第三方的工具，可以转换一般的标签，自定义模态框是参考这个开发的，使用步骤也类似
+    - 爬坑：用第三方工具进行转化，wxParse是一个第三方的工具，可以转换一般的HTML标签，自定义模态框是参考这个开发的，使用步骤也类似
 - 双向绑定出错
     - 爬坑：this.data.tab = '' 这种更改方式不会触发双向绑定，必须通过this.setData({})才能触发双向绑定
-
+- wxss的:hover伪类，按下去就回不来了
+    - 爬坑：在标签添加hover-class属性，值对应wxss的类
 
 
 ## app.json说明

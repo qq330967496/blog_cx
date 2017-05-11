@@ -1,0 +1,19 @@
+.container{
+    /*background-color: #fff;*/
+    /*padding:35rpx;*/
+}
+.mod{
+
+}
+.mod .title{
+    padding:20rpx;
+    border-bottom:1px solid #ccc;
+    font-weight: bold;
+}
+.mod .mod_main{
+    padding:20rpx;
+}
+
+input{
+    border:1px solid #ccc;
+}
