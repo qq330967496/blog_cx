@@ -84,7 +84,7 @@
         - selectedIconPath：选中的图片路径
 - debug：是否使用调试模式。（另外，开发版的小程序可以在右上角打开调试）
 
-## 微信小程序wepy框架 - 一个类似vue的小程序专用框架
+## 微信小程序wepy框架 - 一个小程序专用的类似vue的框架
 >[官方API](https://wepyjs.github.io/wepy/#/)
 
 
