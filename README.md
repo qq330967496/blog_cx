@@ -33,7 +33,7 @@
 - window对象在哪
     - 爬坑：微信小程序用wx对象
 - 调试，没有热加载
-    - 爬不出坑：在app.json的页面配置中将要调试的页面放在首行，但无法传参
+    - 爬坑：在app.json的页面配置中将要调试的页面放在首行，无法传参。需要手动在代码里面加。
     
 - input，radio，checkbox都不能直接绑定data
     - 爬坑：
@@ -84,7 +84,8 @@
         - selectedIconPath：选中的图片路径
 - debug：是否使用调试模式。（另外，开发版的小程序可以在右上角打开调试）
 
-
+## 微信小程序wepy框架 - 一个类似vue的小程序专用框架
+>[官方API](https://wepyjs.github.io/wepy/#/)
 
 
 
